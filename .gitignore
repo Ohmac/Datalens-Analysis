@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+pip-log.txt
+pip-delete-this-directory.txt
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.log
+.git
+.mypy_cache
+.pytest_cache
+.hypothesis
+
+# Flask
+instance/
+.webassets-cache
+
+# Uploaded files
+uploads/
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db

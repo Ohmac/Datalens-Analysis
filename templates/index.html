@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container py-5">
+  <div class="row justify-content-center text-center mb-5">
+    <div class="col-lg-8">
+      <h1 class="display-4 fw-bold text-primary">
+        <i class="bi bi-bar-chart-fill me-3"></i>Datalens Analysis
+      </h1>
+      <p class="lead text-muted mt-3">
+        A web-based data analytics tool for exploring, visualizing, and understanding your CSV data.
+        Upload a dataset and start uncovering insights instantly.
+      </p>
+      <div class="d-flex justify-content-center gap-3 mt-4">
+        <a href="{{ url_for('upload') }}" class="btn btn-primary btn-lg px-4">
+          <i class="bi bi-upload me-2"></i>Upload Data
+        </a>
+        {% if has_data %}
+        <a href="{{ url_for('dashboard') }}" class="btn btn-outline-primary btn-lg px-4">
+          <i class="bi bi-speedometer2 me-2"></i>Go to Dashboard
+        </a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+  <!-- Feature cards -->
+  <div class="row g-4">
+    <div class="col-md-4">
+      <div class="card h-100 shadow-sm border-0">
+        <div class="card-body text-center p-4">
+          <div class="feature-icon bg-primary bg-gradient text-white rounded-3 mb-3 mx-auto">
+            <i class="bi bi-upload fs-3"></i>
+          </div>
+          <h5 class="card-title fw-semibold">Upload CSV</h5>
+          <p class="card-text text-muted">
+            Simply upload any CSV file and Datalens will automatically detect column types and
+            prepare your data for analysis.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card h-100 shadow-sm border-0">
+        <div class="card-body text-center p-4">
+          <div class="feature-icon bg-success bg-gradient text-white rounded-3 mb-3 mx-auto">
+            <i class="bi bi-speedometer2 fs-3"></i>
+          </div>
+          <h5 class="card-title fw-semibold">Interactive Dashboard</h5>
+          <p class="card-text text-muted">
+            Build interactive charts — histograms, scatter plots, bar charts, line charts, box
+            plots, pie charts, and correlation heatmaps.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card h-100 shadow-sm border-0">
+        <div class="card-body text-center p-4">
+          <div class="feature-icon bg-warning bg-gradient text-white rounded-3 mb-3 mx-auto">
+            <i class="bi bi-graph-up fs-3"></i>
+          </div>
+          <h5 class="card-title fw-semibold">Statistical Analysis</h5>
+          <p class="card-text text-muted">
+            Get instant descriptive statistics — mean, median, standard deviation, quartiles,
+            and missing-value counts for every column.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
