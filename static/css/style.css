@@ -1,0 +1,83 @@
+/* ── Layout ────────────────────────────────────────────────────────── */
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: #f8f9fa;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+.footer {
+  margin-top: auto;
+}
+
+/* ── Navbar ────────────────────────────────────────────────────────── */
+.navbar-brand {
+  font-size: 1.25rem;
+  letter-spacing: 0.02em;
+}
+
+/* ── Feature icons (home page) ─────────────────────────────────────── */
+.feature-icon {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+}
+
+/* ── Upload / drop zone ────────────────────────────────────────────── */
+.upload-area {
+  border: 2px dashed #0d6efd;
+  border-radius: 12px;
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.2s, border-color 0.2s;
+  background-color: #f0f7ff;
+}
+
+.upload-area:hover,
+.upload-area.drag-over {
+  background-color: #dbeafe;
+  border-color: #0a58ca;
+}
+
+/* ── Cards ─────────────────────────────────────────────────────────── */
+.card {
+  border-radius: 12px;
+}
+
+.card-header {
+  border-radius: 12px 12px 0 0 !important;
+  padding: 0.75rem 1.25rem;
+}
+
+/* ── Chart container ───────────────────────────────────────────────── */
+.chart-container {
+  min-height: 420px;
+  width: 100%;
+}
+
+/* ── Stat tables from pandas ───────────────────────────────────────── */
+.table {
+  font-size: 0.875rem;
+}
+
+.table th {
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* ── Badges for dtype ──────────────────────────────────────────────── */
+.badge-dtype {
+  font-size: 0.7rem;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background-color: #e9ecef;
+  color: #495057;
+}
